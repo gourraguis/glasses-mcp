@@ -1,0 +1,19 @@
+{
+  "name": "glasses-mcp",
+  "version": "1.0.0",
+  "description": "A Model-Context-Peripheral (MCP) server that provides a tool for taking screenshots of websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Abderrahmane Gourragui",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "@types/node": "^24.0.10",
+    "puppeteer": "^24.11.2",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.74"
+  }
+}

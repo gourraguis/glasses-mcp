@@ -1,3 +1,6 @@
+# Dependencies
+node_modules/
+
 # Gemini-specific files
 GEMINI.md
 
