@@ -1,17 +1,18 @@
 # Website Screenshot MCP
 
-This project is a Model-Context-Peripheral (MCP) server that provides a tool for taking screenshots of websites. It is an open source project created by Abderrahmane Gourragui.
+[![NPM Version](https://img.shields.io/npm/v/glasses-mcp?style=flat-square)](https://www.npmjs.com/package/glasses-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-## Overview
+A Model-Context-Peripheral (MCP) server that provides a powerful tool for taking screenshots of websites. This project allows AI agents and other clients to programmatically capture web pages with a simple, standardized interface.
 
-The primary goal of this project is to create a simple, yet powerful, MCP that can be used by AI agents to capture screenshots of web pages. The server is built using the [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) and uses [Puppeteer](https://pptr.dev/) for headless browser automation.
+This is an open source project by [Abderrahmane Gourragui](https://github.com/gourraguis).
 
 ## Features
 
-*   Take a full-page screenshot of any URL.
-*   Save the screenshot to a specified path.
-*   (Coming Soon) Choose between PNG and JPEG formats.
-*   (Coming Soon) Capture only the above-the-fold content.
+*   **Capture any URL:** Take a screenshot of any public website.
+*   **Selectable Format:** Choose between `png` and `jpeg` image formats.
+*   **Full Page or Viewport:** Capture the entire scrollable page (default) or just the visible viewport.
+*   **Structured Output:** Returns a clear JSON object indicating success or failure.
 
 ## Getting Started
 
@@ -21,40 +22,75 @@ The primary goal of this project is to create a simple, yet powerful, MCP that c
 
 ### Installation
 
+```bash
+npm install -g glasses-mcp
+```
+
+### Usage
+
+To use the screenshot MCP, you must launch it via a compatible client, such as the [MCP Inspector](https://github.com/modelcontextprotocol/inspector). The server communicates over `stdio` and is not meant to be run directly by a user.
+
+**Example with MCP Inspector:**
+
+1.  Make sure the MCP is installed globally:
+    ```bash
+    npm install -g glasses-mcp
+    ```
+2.  Launch the MCP Inspector and tell it to run the `glasses-mcp` command:
+    ```bash
+    npx @modelcontextprotocol/inspector glasses-mcp
+    ```
+3.  The Inspector UI will open in your browser. Connect to the server and you can now call the `screenshot` tool.
+
+## Tool: `screenshot`
+
+### Parameters
+
+| Name         | Type                     | Required | Default | Description                                           |
+|--------------|--------------------------|----------|---------|-------------------------------------------------------|
+| `url`        | `string`                 | Yes      | -       | The full URL of the website to capture.               |
+| `outputPath` | `string`                 | Yes      | -       | The local file path to save the screenshot to.        |
+| `format`     | `"png"` \| `"jpeg"`      | No       | `"png"` | The output image format.                              |
+| `fullPage`   | `boolean`                | No       | `true`  | If `true`, captures the entire page. If `false`, captures only the visible viewport. |
+
+### Returns
+
+A JSON object with the following structure:
+
+**Success:**
+```json
+{
+  "success": true,
+  "outputPath": "/path/to/your/screenshot.png"
+}
+```
+
+**Failure:**
+```json
+{
+  "success": false,
+  "error": "Error message describing the failure."
+}
+```
+
+## Development
+
+To contribute to this project:
+
 1.  Clone the repository:
     ```bash
     git clone https://github.com/gourraguis/glasses-mcp.git
     ```
-2.  Install the dependencies:
+2.  Install dependencies:
     ```bash
+    cd glasses-mcp
     npm install
     ```
-
-### Running the Server
-
-1.  Compile the TypeScript code:
+3.  Build the project:
     ```bash
-    npx tsc
+    npm run build
     ```
-2.  Run the compiled server:
+4.  To test, use the MCP Inspector with your local build:
     ```bash
-    node dist/main.js
+    npx @modelcontextprotocol/inspector node dist/main.js
     ```
-> **Note:** A `start` script will be configured in `package.json` as part of the initial project setup to simplify this process.
-
-## Development
-
-### Testing
-
-To test the server during development, you can use the [MCP Inspector](https://github.com/modelcontextprotocol/inspector).
-
-1.  Start the server (see "Running the Server" above).
-2.  In a separate terminal, run the MCP Inspector:
-    ```bash
-    npx @modelcontextprotocol/inspector
-    ```
-3.  Open the Inspector UI in your browser (usually at `http://127.0.0.1:6274`) and connect to the running server to test the `screenshot` tool.
-
-## Project Management
-
-This project's development is managed through a series of tickets located in the `/tickets` directory.
