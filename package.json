@@ -2,8 +2,10 @@
   "name": "glasses-mcp",
   "version": "1.0.0",
   "description": "A Model-Context-Peripheral (MCP) server that provides a tool for taking screenshots of websites.",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

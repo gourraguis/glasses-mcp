@@ -1,6 +1,14 @@
 # Dependencies
 node_modules/
 
+# Build output
+dist/
+
+# Test files
+*.png
+*.jpg
+*.jpeg
+
 # Gemini-specific files
 GEMINI.md
 
