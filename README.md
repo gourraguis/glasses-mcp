@@ -17,6 +17,8 @@ It's a simple tool that allows your AI to request a perfect, device-specific scr
   - [Example Prompts](#example-prompts)
   - [Tool Reference: `screenshot`](#tool-reference-screenshot)
   - [Supported Devices](#supported-devices)
+  - [Error Handling](#error-handling)
+  - [Limitations](#limitations)
 - [Development & Contributing](#development--contributing)
 
 ## Features
@@ -54,12 +56,18 @@ Once integrated, you can use prompts like these with your AI assistant.
 
 ### Example Prompts
 
+Here are a few examples of how you can use Glasses MCP.
+
+For a straightforward capture of a homepage, where the AI can infer the filename:
 > "Take a screenshot of github.com and save it to my desktop."
 
+To specify a different image format and save location:
 > "Get a JPEG screenshot of the latest news on bbc.com/news and save it in my downloads folder."
 
+To see how a website looks on a mobile device, specifying the exact output filename:
 > "Capture the verge.com homepage as it would appear on a small iOS device and save it as `verge-mobile.png`."
 
+To capture a local development server, focusing only on the visible portion of the page:
 > "Capture just the viewport of my local server at `http://localhost:3000`."
 
 ### Tool Reference: `screenshot`
@@ -94,6 +102,23 @@ The `screenshot` tool can optionally emulate a specific device, which sets the v
   "outputPath": "/path/to/your/screenshot.png"
 }
 ```
+
+### Error Handling
+
+If the tool encounters an error (e.g., an invalid URL, a website that fails to load), it will return a JSON object with the `isError` flag set to `true` and a descriptive error message.
+
+```json
+{
+  "success": false,
+  "error": "net::ERR_NAME_NOT_RESOLVED at https://invalid-url-here.com"
+}
+```
+
+### Limitations
+
+*   **No Login/Authentication:** The tool cannot log in to websites that require authentication. It can only capture publicly accessible content.
+*   **Anti-Bot Measures:** Some websites employ sophisticated anti-bot technologies that may block the tool from capturing a screenshot.
+*   **Complex Interactions:** The tool does not support complex interactions like clicking buttons, filling out forms, or scrolling to a specific element before taking a screenshot.
 
 ## Development & Contributing
 
