@@ -1,15 +1,28 @@
-# Website Screenshot MCP
+# Glasses MCP: Let Your AI See the Web 👓
+
+> **Give your AI agent vision.**
 
 [![NPM Version](https://img.shields.io/npm/v/glasses-mcp?style=flat-square)](https://www.npmjs.com/package/glasses-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-A Model Context Protocol (MCP) server that provides a powerful tool for taking screenshots of websites. This project allows AI agents and other clients to programmatically capture web pages, including local development servers.
+Modern AI agents can write, reason, and code, but they can't *see* the web. Glasses MCP bridges that gap. It's a simple yet powerful Model Context Protocol (MCP) server that gives your AI assistant the ability to browse and capture any website, turning a URL into a visual artifact.
+
+## Table of Contents
+
+- [Features](#features)
+- [Setup & Integration](#setup--integration)
+- [Usage](#usage)
+  - [Example Prompts](#example-prompts)
+  - [Tool Reference: `screenshot`](#tool-reference-screenshot)
+  - [Supported Devices](#supported-devices)
+- [Development & Contributing](#development--contributing)
 
 ## Features
 
 *   **Capture any URL:** Take a screenshot of any public website or local development server.
+*   **Device Emulation:** See how a site looks on a variety of popular phones, tablets, and laptops.
 *   **Selectable Format:** Choose between `png` and `jpeg` image formats.
-*   **Full Page or Viewport:** Capture the entire scrollable page (default) or just the visible viewport.
+*   **Full Page or Viewport:** Capture the entire scrollable page or just the visible viewport.
 *   **Structured Output:** Returns a clear JSON object indicating success or failure.
 
 ## Setup & Integration
