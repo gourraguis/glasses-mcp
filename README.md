@@ -1,11 +1,13 @@
 # Glasses MCP: Let Your AI See the Web 👓
 
-> **Give your AI agent vision.**
-
 [![NPM Version](https://img.shields.io/npm/v/glasses-mcp?style=flat-square)](https://www.npmjs.com/package/glasses-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-Modern AI agents can write, reason, and code, but they can't *see* the web. Glasses MCP bridges that gap. It's a simple yet powerful Model Context Protocol (MCP) server that gives your AI assistant the ability to browse and capture any website, turning a URL into a visual artifact.
+Your AI assistant is a powerful partner, capable of processing immense amounts of text and code. But when it comes to the visual web, it's flying blind. It can't see the layout of a competitor's landing page, the design of a complex dashboard, or the look of your latest prototype.
+
+**Glasses MCP gives it sight.**
+
+It's a simple tool that allows your AI to request a perfect, device-specific screenshot of any website. It's not just about taking pictures; it's about giving your AI the context it's been missing, turning the visual web into a resource it can finally understand and interact with.
 
 ## Table of Contents
 

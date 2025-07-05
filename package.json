@@ -18,9 +18,16 @@
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "screenshot",
+    "ai",
+    "ai-agent",
+    "llm",
     "puppeteer",
-    "ai"
+    "screenshot",
+    "web-capture",
+    "page-snapshot",
+    "headless-chrome",
+    "automation",
+    "developer-tools"
   ],
   "author": "Abderrahmane Gourragui",
   "license": "ISC",
