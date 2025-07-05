@@ -53,6 +53,22 @@ Once integrated, you can use prompts like these with your AI assistant.
 | `outputPath` | `string`                 | Yes      | -       | The local file path to save the screenshot to.        |
 | `format`     | `"png"` \| `"jpeg"`      | No       | `"png"` | The output image format.                              |
 | `fullPage`   | `boolean`                | No       | `true`  | If `true`, captures the entire page. If `false`, captures only the visible viewport. |
+| `device`     | `string`                 | No       | `laptop-hidpi` | The name of the device to emulate (see Supported Devices below). |
+
+### Supported Devices
+
+The `screenshot` tool can optionally emulate a specific device, which sets the viewport size, pixel density, and user agent to match. We have curated a list of popular and representative devices to provide good coverage of the most common form factors while keeping the list manageable.
+
+| Device Name                 | Device ID        | Category | Represents                               |
+|-----------------------------|------------------|----------|------------------------------------------|
+| `iPhone 14 Pro Max`         | `ios-large`      | Phone    | A large, modern iOS device.              |
+| `iPhone SE`                 | `ios-small`      | Phone    | A smaller, older-generation iOS device.  |
+| `Pixel 6 Pro`               | `android-large`  | Phone    | A large, modern Android device.          |
+| `Galaxy S8`                 | `android-medium` | Phone    | A common, slightly older Android device. |
+| `iPad Pro 11`               | `tablet-large`   | Tablet   | A modern, high-resolution tablet.        |
+| `iPad Mini`                 | `tablet-small`   | Tablet   | A smaller, popular tablet format.        |
+| `Laptop with HiDPI screen`  | `laptop-hidpi`   | Laptop   | A high-resolution laptop (e.g., MacBook Pro). |
+| `Laptop with MDPI screen`  | `laptop-mdpi`    | Laptop   | A standard-resolution laptop.            |
 
 **Returns:** A JSON object indicating success or failure.
 ```json

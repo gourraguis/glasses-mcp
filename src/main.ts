@@ -6,13 +6,16 @@ import { screenshotTool, screenshotHandler } from "./tools/screenshot.js";
 // Create an MCP server
 const server = new McpServer({
   name: "screenshot-server",
-  version: "1.0.0",
+  version: "1.0.4",
 });
 
 // Register tools
 server.registerTool(
   "screenshot",
-  screenshotTool,
+  {
+    ...screenshotTool,
+    inputSchema: screenshotTool.inputSchema,
+  },
   screenshotHandler
 );
 
