@@ -1,0 +1,54 @@
+{
+  "dxt_version": "0.1",
+  "name": "glasses-mcp",
+  "display_name": "Glasses MCP",
+  "version": "1.1.0",
+  "description": "Glasses MCP is a simple MCP server that lets your AI agent see and capture the web 👓",
+  "long_description": "Your AI assistant is a powerful partner, capable of processing immense amounts of text and code. But when it comes to the visual web, it's flying blind. It can't see the layout of a competitor's landing page, the design of a complex dashboard, or the look of your latest prototype. Glasses MCP gives it sight. It's a simple tool that allows your AI to request a perfect, device-specific screenshot of any website. It's not just about taking pictures; it's about giving your AI the context it's been missing, turning the visual web into a resource it can finally understand and interact with.",
+  "author": {
+    "name": "Abderrahmane Gourragui",
+    "email": "gourragui.success@gmail.com",
+    "url": "https://gourragui.com/"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "dist/main.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/main.js"
+      ],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "screenshot",
+      "description": "Takes a screenshot of a website."
+    }
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "ai-agent",
+    "llm",
+    "puppeteer",
+    "screenshot",
+    "web-capture",
+    "page-snapshot",
+    "headless-chrome",
+    "automation",
+    "developer-tools"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gourraguis/glasses-mcp"
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}

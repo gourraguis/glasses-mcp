@@ -12,7 +12,9 @@ It's a simple tool that allows your AI to request a perfect, device-specific scr
 ## Table of Contents
 
 - [Features](#features)
-- [Setup & Integration](#setup--integration)
+- [Installation](#installation)
+  - [Method 1: Desktop Extension](#method-1-desktop-extension)
+  - [Method 2: Manual JSON Configuration](#method-2-manual-json-configuration)
 - [Usage](#usage)
   - [Example Prompts](#example-prompts)
   - [Tool Reference: `screenshot`](#tool-reference-screenshot)
@@ -29,11 +31,23 @@ It's a simple tool that allows your AI to request a perfect, device-specific scr
 *   **Full Page or Viewport:** Capture the entire scrollable page or just the visible viewport.
 *   **Structured Output:** Returns a clear JSON object indicating success or failure.
 
-## Setup & Integration
+## Installation
 
-To use `glasses-mcp` with a compatible AI assistant, add the following configuration to its settings file. The `npx` command will handle the installation for you.
+You can install Glasses MCP in two ways, depending on your preference and client application.
 
-**MCP Server Configuration:**
+### Method 1: Desktop Extension
+
+This is the easiest way to get started. It allows for one-click installation in compatible clients like Claude Code.
+
+1.  **[Download the latest `glasses-mcp.dxt` file](https://github.com/gourraguis/glasses-mcp/releases/download/v1.1.0/glasses-mcp.dxt)**.
+2.  Open the `.dxt` file with your client application. The client will handle the rest.
+
+### Method 2: Manual JSON Configuration
+
+This method uses `npx` to download and run the package on-demand. It's ideal for command-line usage or for developers who prefer not to install the extension directly.
+
+To use this method, add the following JSON to your client's configuration file:
+
 ```json
 {
   "mcpServers": {
@@ -46,9 +60,9 @@ To use `glasses-mcp` with a compatible AI assistant, add the following configura
 ```
 
 **Configuration File Locations:**
-*   **For Claude Desktop:** Add the configuration to `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS.
-*   **For Gemini CLI:** Add the configuration to `~/.gemini/settings.json` on macOS.
-*   **For Cursor IDE:** Add the configuration to your user `settings.json` file.
+*   **For Claude Desktop:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+*   **For Gemini CLI:** `~/.gemini/settings.json`
+*   **For Cursor IDE:** Your user `settings.json` file.
 
 ## Usage
 
