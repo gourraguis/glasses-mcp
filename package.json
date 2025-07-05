@@ -1,7 +1,7 @@
 {
   "name": "glasses-mcp",
   "version": "1.0.1",
-  "description": "A Model-Context-Peripheral (MCP) server that provides a tool for taking screenshots of websites.",
+  "description": "A Model Context Protocol (MCP) server that provides a tool for taking screenshots of websites.",
   "main": "dist/main.js",
   "bin": {
     "glasses-mcp": "dist/main.js"

@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/glasses-mcp?style=flat-square)](https://www.npmjs.com/package/glasses-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-A Model-Context-Peripheral (MCP) server that provides a powerful tool for taking screenshots of websites. This project allows AI agents and other clients to programmatically capture web pages, including local development servers.
+A Model Context Protocol (MCP) server that provides a powerful tool for taking screenshots of websites. This project allows AI agents and other clients to programmatically capture web pages, including local development servers.
 
 ## Features
 
