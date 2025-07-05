@@ -14,10 +14,11 @@ export const screenshotTool = {
     url: z.string().url(),
     outputPath: z.string(),
     format: z.enum(["png", "jpeg"]).optional(),
+    fullPage: z.boolean().optional(),
   },
 };
 
-export const screenshotHandler = async ({ url, outputPath, format = "png" }: { url: string; outputPath: string; format?: "png" | "jpeg" }) => {
+export const screenshotHandler = async ({ url, outputPath, format = "png", fullPage = true }: { url: string; outputPath: string; format?: "png" | "jpeg", fullPage?: boolean }) => {
   try {
     // Ensure the output path has the correct extension
     const extension = `.${format}`;
@@ -34,7 +35,7 @@ export const screenshotHandler = async ({ url, outputPath, format = "png" }: { u
     });
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: "networkidle2" });
-    await page.screenshot({ path, type: format, fullPage: true });
+    await page.screenshot({ path, type: format, fullPage });
     await browser.close();
 
     return {
