@@ -39,11 +39,13 @@ Once integrated, you can use prompts like these with your AI assistant.
 
 ### Example Prompts
 
-> "Take a screenshot of github.com and save it to my desktop as `github-home.png`."
+> "Take a screenshot of github.com and save it to my desktop."
 
-> "Get a JPEG screenshot of the latest news on bbc.com/news, and save it in my downloads folder as `bbc-news.jpeg`."
+> "Get a JPEG screenshot of the latest news on bbc.com/news and save it in my downloads folder."
 
-> "Capture just the viewport of my local server at `http://localhost:3000` and name it `localhost-viewport.png`."
+> "Capture the verge.com homepage as it would appear on a small iOS device and save it as `verge-mobile.png`."
+
+> "Capture just the viewport of my local server at `http://localhost:3000`."
 
 ### Tool Reference: `screenshot`
 
