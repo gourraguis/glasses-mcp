@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/gourraguis-glasses-mcp-badge.png)](https://mseep.ai/app/gourraguis-glasses-mcp)
+
 # Glasses MCP: Let Your AI See the Web 👓
 
 [![NPM Version](https://img.shields.io/npm/v/glasses-mcp?style=flat-square)](https://www.npmjs.com/package/glasses-mcp)
